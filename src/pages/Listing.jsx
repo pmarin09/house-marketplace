@@ -36,6 +36,7 @@ if(loading){
     return <Spinner/>
 }
 
+
   return (
     <main>
         {/* SLIDER */}
@@ -83,10 +84,9 @@ if(loading){
 
             {/* MAP */}
 
-            {auth.currentUser?.uid != listing.userRef && (
+            {auth.currentUser?.uid !== listing.userRef && (
                 <Link to={`/contact/${listing.userRef}?listingName=
-                ${listing.name}&listingLocation=
-                ${listing.location}`}
+                ${listing.name}`}
                 className='primaryButton'>
                     Contact Landlord
                 </Link>
