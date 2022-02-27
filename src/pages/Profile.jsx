@@ -90,6 +90,8 @@ const [loading, setLoading] = useState(true)
       toast.success('Succesfully deleted listing')
     }
   }
+
+  const onEdit = (listingId) => navigate(`/edit-listing/${listingId}`)
     return <div className = 'profile'>
       <header className = 'profileHeader'>
         <p className="pageHeader"> My Profile</p>
@@ -142,6 +144,7 @@ const [loading, setLoading] = useState(true)
                 listing={listing.data} 
                 id ={listing.id}
                 onDelete={()=>onDelete(listing.id)}
+                onEdit={()=>onEdit(listing.id)}
                 />
               ))}
             </ul>
